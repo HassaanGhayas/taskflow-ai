@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "specifyplus": {
-      "command": "/home/hasss/todo-app/specifyplus-mcp-server/run-server.sh",
-      "args": []
-    }
-  }
-}
