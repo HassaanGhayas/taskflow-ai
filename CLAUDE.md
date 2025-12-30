@@ -1,3 +1,5 @@
+@AGENTS.md
+
 # Claude Code Rules
 
 This file is generated during init for the selected agent.
@@ -208,3 +210,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Python 3.13+ + Python Standard Library (argparse, dataclasses, sys, typing) (001-todo-console-app)
+- In-memory (no database or file persistence per Phase 1 scope) (001-todo-console-app)
+
+## Recent Changes
+- 001-todo-console-app: Added Python 3.13+ + Python Standard Library (argparse, dataclasses, sys, typing)
