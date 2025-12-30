@@ -1,33 +1,19 @@
 <!--
 Sync Impact Report:
-- Version change: 1.0.0 → 2.0.0
-- Principles added/modified:
-  * I-VII: Core Principles - PRESERVED
-  * VIII. Security Standards - NEW
-  * IX. Performance Standards - NEW
-  * X. Error Handling & Observability - NEW
-  * XI. Versioning & Compatibility - NEW
-  * XII. Operational Standards - NEW
-  * XIII. Code Quality & Verification - NEW
-  * XIV. Dependency & Supply Chain Management - NEW
-  * XV. Agent Boundaries & Authority - UPDATED (was AI Tooling Rules)
-- New sections:
-  * Security Standards (secret management, vulnerability scanning, auth, PII) - NEW
-  * Performance Standards (response times, resource limits, scalability) - NEW
-  * Error Handling & Observability (logging, error classification, health checks) - NEW
-  * Versioning & Compatibility (semver, breaking changes, deprecation) - NEW
-  * Operational Standards (deployment, rollbacks, monitoring) - NEW
-  * Code Quality & Verification (coverage, reviews, static analysis) - NEW
-  * Dependency & Supply Chain Management (pinning, licenses, lockfiles) - NEW
+- Version change: 2.0.0 → 2.0.1
+- Change type: PATCH (Project-specific clarifications for Todo App Phase 1)
+- Principles modified:
+  * Technology Constraints - Added Python 3.13+ and uv package manager requirements
+  * Development Constraints - Clarified Phase 1 (Console) in-memory storage constraints
+- Changes:
+  * Added explicit Python 3.13+ requirement under Technology Constraints
+  * Added uv as mandatory package manager for Python projects
+  * Clarified Phase 1 scoping: In-memory storage, no persistence layer required for MVP
+  * Added project structure requirement: src/ layout mandatory for Python projects
 - Templates requiring updates:
-  ✅ plan-template.md - Constitution Check section now validates security, performance, observability
-  ✅ spec-template.md - Requirements now include security, performance, operational concerns
-  ✅ tasks-template.md - Task phases include security hardening, observability, testing coverage
+  ✅ All templates remain valid - no structural changes needed
 - Follow-up TODOs:
-  * Define concrete security scanning tools and CI integration
-  * Establish baseline performance benchmarks per phase
-  * Configure observability stack (logging, metrics, tracing)
-  * Set up dependency scanning and license compliance tooling
+  * None - all clarifications are non-breaking and project-specific
 -->
 
 # TaskFlow AI Constitution
@@ -356,6 +342,12 @@ Outdated specifications are defects.
 - Experimental libraries (below v1.0 or <100 stars) require explicit approval
 - Infrastructure is treated as code and MUST be specified
 
+**Phase 1 (Console) Technology Stack:**
+- **Language**: Python 3.13+ (mandatory)
+- **Package Manager**: uv (mandatory for dependency management and virtual environments)
+- **Project Structure**: src/ layout (mandatory for Python projects)
+- **Storage**: In-memory (no persistence layer required for MVP)
+
 **Definition of Experimental**: Libraries without stable release (v1.0+) or with limited adoption (<100 stars, <10K downloads/month).
 
 Tooling MUST serve the specification, never the reverse.
@@ -433,4 +425,4 @@ All PRs and reviews MUST verify compliance with this Constitution.
 Complexity MUST be justified in specifications.
 Use CLAUDE.md for runtime development guidance and agent instructions.
 
-**Version**: 2.0.0 | **Ratified**: 2025-12-21 | **Last Amended**: 2025-12-23
+**Version**: 2.0.1 | **Ratified**: 2025-12-21 | **Last Amended**: 2025-12-30
